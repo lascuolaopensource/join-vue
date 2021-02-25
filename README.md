@@ -15,8 +15,7 @@
 2. [Introduction](#introduction)
 3. [How to use it?](#how-to-use-it?)
 4. [Contribution](#contribution)
-5. [Core Team](#core-team)
-6. [License](#license)
+5. [License](#license)
 
 <h2>Installation</h2>
 ...
@@ -61,7 +60,7 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 <h3> Any contributions that you make will be under the MIT Software License </h3>
 In short, when you submit the code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-### :bug: Report bugs using Github's [issues](https://github.com/pixari/vue-i18n-extract/issues)
+### :bug: Report bugs using Github's [issues](https://github.com/lascuolaopensource/join/issues)
 
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue]().
 
