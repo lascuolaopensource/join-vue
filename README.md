@@ -42,11 +42,11 @@
 
 **2. Front-End is running at**
 
-```[http://](http://localhost:8085/)```
+```http://localhost:8085/```
 
 **3. Back-End is running at**
 
-```[http://localhost:8000/](http://localhost:8000/)```
+```http://localhost:8000/```
 
 
 <h2>Contribution</h2>
