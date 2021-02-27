@@ -18,14 +18,35 @@
 5. [License](#license)
 
 <h2>Installation</h2>
-...
 
+**1. Clone the repository**
+
+```bash https://github.com/lascuolaopensource/join.git```
+
+**2. Install all the dependencies**
+
+```bash yarn install```
+
+**3. Bootstrap the packages with Lerna**
+
+```bash lerna boostrap```
 
 <h2>Introduction</h2>
 ...
 
 <h2>How to use it?</h2>
-...
+
+**1. Start the packages**
+
+```bash yarn start```
+
+**2. Front-End is running at**
+
+```[http://](http://localhost:8085/)```
+
+**3. Back-End is running at**
+
+```[http://localhost:8000/](http://localhost:8000/)```
 
 
 <h2>Contribution</h2>
