@@ -40,11 +40,11 @@
 
 ```bash yarn start```
 
-**2. Front-End is running at**
+**2. CMS Front-End is running at**
 
 ```http://localhost:8085/```
 
-**3. Back-End is running at**
+**3. CMS-Service is running at**
 
 ```http://localhost:8000/```
 

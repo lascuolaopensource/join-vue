@@ -1,5 +1,5 @@
 {
-  "name": "@mono/frontend",
+  "name": "@mono/cms",
   "version": "0.1.0",
   "private": true,
   "scripts": {
