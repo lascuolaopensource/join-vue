@@ -1,4 +1,11 @@
-export const state: { courses: Array<object> } = {
+import { Course } from '@/types/Course';
+
+interface CoursesState {
+  courses: Course[];
+}
+
+export const state: CoursesState = {
   courses: [],
 };
-export type State = typeof state;
+
+export type State = CoursesState;

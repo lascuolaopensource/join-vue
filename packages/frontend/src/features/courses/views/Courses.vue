@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import CoursesList from '@/features/courses/containers/CoursesList.vue';
 
 export default defineComponent({
