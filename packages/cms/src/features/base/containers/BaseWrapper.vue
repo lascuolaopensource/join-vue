@@ -1,6 +1,6 @@
 <template>
   <div>
-    <system-bar :page-title="pageTitle" />
+    <system-bar @toggleSidebarVisibility="toggleSidebarVisibility" :page-title="pageTitle" />
     <sidebar />
     <v-main>
       <v-container class="py-8 px-6" fluid>
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 import SystemBar from '../../system-bar/components/SystemBar.vue';
-import Sidebar from '../../sidebar/components/Sidebar.vue';
+import Sidebar from '../../sidebar/containers/Sidebar.vue';
 
 export default {
   components: {
@@ -25,5 +25,10 @@ export default {
   computed: {
     ...mapState('base', ['pageTitle']),
   },
+
+  methods: {
+    ...mapActions('sidebar', ['toggleSidebarVisibility']),
+  },
+
 };
 </script>

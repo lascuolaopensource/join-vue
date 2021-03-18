@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app>
+  <v-navigation-drawer v-model="isSidebarVisible" app>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title">
@@ -37,12 +37,17 @@
 import { mapState } from 'vuex';
 
 export default {
-  data: () => ({
-    drawer: null,
-  }),
-
   computed: {
     ...mapState('sidebar', ['links']),
+    isSidebarVisible: {
+      get() {
+        return this.$store.state.sidebar.isSidebarVisible;
+      },
+      set(isSidebarVisible) {
+        this.$store.dispatch('sidebar/setSidebarVisibility', isSidebarVisible);
+      },
+    },
   },
+
 };
 </script>

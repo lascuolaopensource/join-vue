@@ -6,7 +6,6 @@ Vue.use(Vuex);
 export default {
   namespaced: true,
   state: {
-    pageTitle: '',
   },
   mutations: {
   },

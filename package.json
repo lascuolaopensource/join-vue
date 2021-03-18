@@ -10,6 +10,7 @@
     "build": "lerna run build --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "vue-cli-plugin-vuetify": "~2.2.2"
   }
 }
