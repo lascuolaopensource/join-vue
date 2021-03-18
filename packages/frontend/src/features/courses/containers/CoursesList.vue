@@ -1,22 +1,34 @@
 <template>
-  <h2>Courses List</h2>
-  {{ courses }}
+  <v-data-table
+    :headers="tableHeaders"
+    :items="openCourses"
+    class="elevation-1"
+  >
+    <template v-slot:[`item.subscriptions`]="{ item }">
+    <v-chip
+      :color="getColor(item.subscriptions)"
+      dark
+    >
+      {{ item.subscriptions }}
+    </v-chip>
+  </template>
+  </v-data-table>
 </template>
 
-<script lang="ts">
-import {
-  defineComponent, onMounted,
-} from 'vue';
+<script>
+import { mapState } from 'vuex';
 
-import useCourses from '@/api/courses';
+export default {
 
-export default defineComponent({
-  name: 'CoursesList',
-
-  setup() {
-    const { courses, getCourses } = useCourses();
-    onMounted(async () => getCourses());
-    return { courses };
+  computed: {
+    ...mapState('courses', ['tableHeaders', 'openCourses']),
   },
-});
+  methods: {
+    getColor(subscriptions) {
+      if (subscriptions > 80) return 'green';
+      if (subscriptions > 40) return 'orange';
+      return 'red';
+    },
+  },
+};
 </script>
