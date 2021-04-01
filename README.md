@@ -29,7 +29,7 @@
 
 **3. Bootstrap the packages with Lerna**
 
-```bash lerna boostrap```
+```bash yarn boostrap```
 
 <h2>Introduction</h2>
 ...
