@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_datetime_datetimes",
+  "info": {
+    "name": "datetime",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "time_start": {
+      "type": "time"
+    },
+    "time_end": {
+      "type": "time"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "workshop",
+        "lecture"
+      ]
+    },
+    "difficulty_level": {
+      "type": "enumeration",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "fields": {
+      "collection": "field",
+      "via": "courses",
+      "dominant": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "datetimes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "datetime.datetime"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "teachers": {
+      "via": "courses_held",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    }
+  }
+}

@@ -38,9 +38,6 @@
       "via": "permissions",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "jsonfield": {
-      "type": "json"
     }
   }
 }
