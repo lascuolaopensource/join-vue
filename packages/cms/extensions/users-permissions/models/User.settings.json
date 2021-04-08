@@ -68,6 +68,11 @@
     },
     "surname": {
       "type": "string"
+    },
+    "skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.skills"
     }
   }
 }

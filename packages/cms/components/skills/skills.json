@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "name": "Skills",
+    "icon": "yin-yang"
+  },
+  "options": {},
+  "attributes": {
+    "field": {
+      "model": "field"
+    },
+    "confirmed": {
+      "type": "boolean"
+    }
+  }
+}

@@ -15,6 +15,9 @@
     },
     "time_end": {
       "type": "time"
+    },
+    "phase_name": {
+      "type": "string"
     }
   }
 }
