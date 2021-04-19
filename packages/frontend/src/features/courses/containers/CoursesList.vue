@@ -1,27 +1,27 @@
 <template>
-  <v-data-table
-    :headers="tableHeaders"
-    :items="openCourses"
-    class="elevation-1"
-  >
-    <template v-slot:[`item.subscriptions`]="{ item }">
-    <v-chip
-      :color="getColor(item.subscriptions)"
-      dark
-    >
-      {{ item.subscriptions }}
-    </v-chip>
-  </template>
-  </v-data-table>
+  <ul>
+    <li v-for="(course, idx) of courses" :key="idx">{{ course.title }}</li>
+  </ul>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+// import { mapState } from 'vuex';
+import gql from 'graphql-tag';
 
 export default {
-
-  computed: {
-    ...mapState('courses', ['tableHeaders', 'openCourses']),
+  apollo: {
+    courses: gql`query {
+      courses {
+        id
+        title
+      }
+    }`,
+  },
+  data() {
+    return {
+      tableHeaders: ['id', 'title'],
+      courses: [],
+    };
   },
   methods: {
     getColor(subscriptions) {
