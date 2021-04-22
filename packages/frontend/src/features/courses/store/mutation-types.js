@@ -1,3 +1,0 @@
-export default {
-  SET_SIDEBAR_VISIBILITY: 'SET_SIDEBAR_VISIBILITY',
-};
