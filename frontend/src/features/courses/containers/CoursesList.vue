@@ -1,19 +1,14 @@
 <template>
-  <div>
-    {{ courses }}
-    <table>
-      <tr>
-        <th v-for="(tableHeader, idx) of tableHeaders" :key="`tableHeader-${idx}`">
-          {{ tableHeader }}
-        </th>
-      </tr>
-      <tr v-for="(course, idx) of courses" :key="idx">
-        <td v-for="(field, idx) of tableHeaders" :key="`field-${idx}`">{{ course[field] }}</td>
-      </tr>
-    </table>
-    <pre>
-    </pre>
-  </div>
+  <table>
+    <tr>
+      <th v-for="(tableHeader, idx) of tableHeaders" :key="`tableHeader-${idx}`">
+        {{ tableHeader }}
+      </th>
+    </tr>
+    <tr v-for="(course, idx) of courses" :key="idx" class="divide-y divide-gray-100"  >
+      <td v-for="(field, idx) of tableHeaders" :key="`field-${idx}`">{{ course[field] }}</td>
+    </tr>
+  </table>
 </template>
 
 <script>
