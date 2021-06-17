@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from '../features/home/views/Home.vue';
 import Courses from '../features/courses/routes';
+import LoginWindow from '../features/login/routes';
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,7 @@ const routes = [
     component: Home,
   },
   ...Courses,
+  ...LoginWindow,
 ];
 
 const router = new VueRouter({

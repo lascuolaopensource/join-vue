@@ -3,6 +3,11 @@ import gql from 'graphql-tag';
 
 export const GET_COURSES = gql`query {
     courses {
-      id
+      id,
+      title,
+      type,
+      difficulty_level,
+      price,
+      description
     }
   }`;
