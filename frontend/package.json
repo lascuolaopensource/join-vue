@@ -11,6 +11,7 @@
   "dependencies": {
     "apollo": "^2.32.8",
     "apollo-boost": "^0.4.9",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "eslint-plugin-graphql": "^4.0.0",
     "graphql": "^15.5.0",

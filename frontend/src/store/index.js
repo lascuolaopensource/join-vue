@@ -16,7 +16,7 @@ export default new Vuex.Store({
   },
   modules: {
     ciao: moduleB,
-    ...login,
+    login,
   },
   actions: {
   },

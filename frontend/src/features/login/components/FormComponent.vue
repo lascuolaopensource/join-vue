@@ -6,7 +6,7 @@
       <label for='password'>Password →</label>
       <input :value="password" @input="updatePassword" type="password">
       <br><br>
-      <input v-on:click="sendUserData" type='submit' value='Submit'>
+      <button @click.stop.prevent="submit()" v-on:click="sendUserData" type='submit'>Send!</button>
     </form>
 </template>
 
@@ -15,10 +15,20 @@ import { mapActions, mapState } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['email', 'password']),
+    ...mapState({
+      email: (state) => state.email,
+      password: (state) => state.password,
+    }),
   },
   methods: {
-    ...mapActions(['sendUserData', 'updateEmail', 'updatePassword']),
+    ...mapActions('login', [
+      'sendUserData',
+      'updateEmail',
+      'updatePassword',
+    ]),
+    submit() {
+      this.$router.push({ name: 'profile' });
+    },
   },
 };
 </script>
