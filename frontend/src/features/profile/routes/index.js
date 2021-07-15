@@ -1,9 +1,9 @@
-import ProfileIndex from '../views/profileIndex.vue';
+import ProfileIndex from '../views/ProfileIndex.vue';
 
 export default [
   {
     path: '/profile',
-    name: 'profile',
+    name: 'Profile',
     component: ProfileIndex,
   },
 ];

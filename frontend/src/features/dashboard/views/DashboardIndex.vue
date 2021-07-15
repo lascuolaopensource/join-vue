@@ -1,10 +1,10 @@
 <template>
   <div>
     <header>
-      <top-bar :buttons="buttons"/>
+      <top-bar :buttons="FirstLevelButtons"/>
+      <top-bar :buttons="SecondLevelButtons"/>
     </header>
     <body>
-      <p>Questa è la home e per mo' non c'è niente.</p>
     </body>
     <footer>
     </footer>
@@ -17,7 +17,7 @@ import TopBar from '../../../components/TopBar.vue';
 export default ({
   data() {
     return {
-      buttons: [{
+      FirstLevelButtons: [{
         name: 'Join',
         index: '/',
       },
@@ -32,6 +32,22 @@ export default ({
       {
         name: 'Esci',
         index: 'login',
+      }],
+      SecondLevelButtons: [{
+        name: 'Dashboard',
+        index: 'dashboard',
+      },
+      {
+        name: 'I tuoi corsi',
+        index: 'void',
+      },
+      {
+        name: 'Dati personali',
+        index: 'profile',
+      },
+      {
+        name: 'Account',
+        index: 'void',
       }],
     };
   },

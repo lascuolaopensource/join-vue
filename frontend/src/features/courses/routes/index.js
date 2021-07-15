@@ -3,7 +3,7 @@ import Courses from '../views/Index.vue';
 export default [
   {
     path: '/courses',
-    name: 'courses',
+    name: 'Courses',
     component: Courses,
   },
 ];

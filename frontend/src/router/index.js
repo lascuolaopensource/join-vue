@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Home from '../features/home/views/Home.vue';
 import Courses from '../features/courses/routes';
+import Dashboard from '../features/dashboard/routes';
+import Home from '../features/home/views/Home.vue';
 import LoginWindow from '../features/login/routes';
 import UserProfile from '../features/profile/routes';
 
@@ -15,6 +16,7 @@ const routes = [
     component: Home,
   },
   ...Courses,
+  ...Dashboard,
   ...LoginWindow,
   ...UserProfile,
 ];
