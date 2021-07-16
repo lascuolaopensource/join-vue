@@ -4,6 +4,7 @@
       <top-bar :buttons="buttons"/>
     </header>
     <body>
+      <router-view />
     </body>
     <footer>
     </footer>
