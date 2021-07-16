@@ -15,6 +15,12 @@
 import TopBar from '../../../components/TopBar.vue';
 
 export default ({
+  created() {
+    // update the value of the button name
+    // with the computed property that has just
+    // been initialized
+    this.buttons[2].name = this.username;
+  },
   data() {
     return {
       buttons: [{
@@ -26,7 +32,7 @@ export default ({
         index: 'courses',
       },
       {
-        name: this.$store.state.login.username,
+        name: '',
         index: 'dashboard',
       },
       {
@@ -36,5 +42,11 @@ export default ({
     };
   },
   components: { TopBar },
+  computed: {
+    username() {
+      console.log('now username gets computed!');
+      return this.$store.state.login.username;
+    },
+  },
 });
 </script>
