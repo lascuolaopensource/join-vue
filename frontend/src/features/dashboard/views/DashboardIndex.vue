@@ -1,8 +1,7 @@
 <template>
   <div>
     <header>
-      <top-bar :buttons="FirstLevelButtons"/>
-      <top-bar :buttons="SecondLevelButtons"/>
+      <top-bar :buttons="buttons"/>
     </header>
     <body>
     </body>
@@ -17,23 +16,7 @@ import TopBar from '../../../components/TopBar.vue';
 export default ({
   data() {
     return {
-      FirstLevelButtons: [{
-        name: 'Join',
-        index: '/',
-      },
-      {
-        name: 'Corsi',
-        index: 'courses',
-      },
-      {
-        name: this.$store.state.login.username,
-        index: 'dashboard',
-      },
-      {
-        name: 'Esci',
-        index: 'login',
-      }],
-      SecondLevelButtons: [{
+      buttons: [{
         name: 'Dashboard',
         index: 'dashboard',
       },
