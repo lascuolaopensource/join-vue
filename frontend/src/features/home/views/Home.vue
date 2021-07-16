@@ -4,7 +4,7 @@
       <top-bar :buttons="buttons"/>
     </header>
     <body>
-      <p>Questa è la home e per mo' non c'è niente.</p>
+      <router-view />
     </body>
     <footer>
     </footer>

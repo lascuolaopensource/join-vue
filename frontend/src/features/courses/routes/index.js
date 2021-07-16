@@ -1,4 +1,4 @@
-import Courses from '../views/Index.vue';
+import Courses from '../views/CoursesIndex.vue';
 
 export default [
   {

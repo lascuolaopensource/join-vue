@@ -1,22 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Courses from '../features/courses/routes';
-import Dashboard from '../features/dashboard/routes';
-import Home from '../features/home/views/Home.vue';
+import Home from '../features/home/routes';
 import LoginWindow from '../features/login/routes';
 import UserProfile from '../features/profile/routes';
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  ...Courses,
-  ...Dashboard,
+  ...Home,
   ...LoginWindow,
   ...UserProfile,
 ];
