@@ -1,6 +1,6 @@
 import Home from '../views/Home.vue';
-import Courses from '../../courses/views/CoursesIndex.vue';
-import Dashboard from '../../dashboard/views/DashboardIndex.vue';
+import Courses from '../../courses/routes';
+import Dashboard from '../../dashboard/routes';
 
 export default [
   {
@@ -8,16 +8,8 @@ export default [
     name: 'Home',
     component: Home,
     children: [
-      {
-        path: 'courses',
-        component: Courses,
-        name: 'Courses',
-      },
-      {
-        path: 'dashboard',
-        component: Dashboard,
-        name: 'Dashboard',
-      },
+      ...Courses,
+      ...Dashboard,
     ],
   },
 ];
