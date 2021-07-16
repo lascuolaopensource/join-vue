@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu mode="horizontal" router=true>
+    <el-menu mode="horizontal" :router=true>
       <el-menu-item
         v-for="button in buttons"
         :key="button.index"
