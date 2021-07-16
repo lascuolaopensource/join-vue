@@ -1,4 +1,5 @@
 import axios from '../../../../node_modules/axios';
+import router from '../../../router';
 
 export default {
   namespaced: true,
@@ -9,6 +10,7 @@ export default {
     name: '',
     surname: '',
     jwtToken: '',
+    errorMessage: '',
   }),
   mutations: {
     UPDATE_EMAIL(state, payload) {
@@ -28,6 +30,9 @@ export default {
     },
     SET_USERNAME(state, payload) {
       state.username = payload;
+    },
+    SET_ERROR_MESSAGE(state, payload) {
+      state.errorMessage = payload;
     },
   },
   actions: {
@@ -50,9 +55,11 @@ export default {
           console.log('User profile:', state.name, state.surname, state.email);
           commit('SET_TOKEN', response.data.jwt);
           console.log('User token: ', state.jwtToken);
+          router.push({ path: '/' });
         })
         .catch((error) => {
           console.log('An error occurred:', error.response);
+          commit('SET_ERROR_MESSAGE', 'Failed to login.');
         });
     },
   },
