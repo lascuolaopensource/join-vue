@@ -37,10 +37,19 @@ export default {
   },
   actions: {
     updateEmail({ commit }, event) {
-      commit('UPDATE_EMAIL', event.target.value);
+      commit('UPDATE_EMAIL', event.target.value.trim());
+    },
+    updateName({ commit }, payload) {
+      commit('SET_NAME', payload);
     },
     updatePassword({ commit }, event) {
       commit('UPDATE_PASSWORD', event.target.value);
+    },
+    updateSurname({ commit }, payload) {
+      commit('SET_SURNAME', payload);
+    },
+    updateUsername({ commit }, payload) {
+      commit('SET_USERNAME', payload);
     },
     sendUserData({ commit, state }) {
       axios

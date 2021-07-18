@@ -3,6 +3,9 @@
     <p>Nome: {{name}}</p>
     <p>Cognome: {{surname}}</p>
     <p>Username: {{username}}</p>
+    <el-button @click="$emit('switch-component')">
+      Modifica i tuoi dati
+    </el-button>
   </div>
 </template>
 
