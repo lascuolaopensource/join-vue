@@ -44,7 +44,6 @@ export default ({
   components: { TopBar },
   computed: {
     username() {
-      console.log('now username gets computed!');
       return this.$store.state.login.username;
     },
   },
